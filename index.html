@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+   
+    <div id="container">
+
+        <div id="left-box">
+
+           
+           
+            <search id="search">
+                <input id="search-input" type="search" placeholder="search for keywords"><svg id="search-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
+            </search>
+
+            <div id="left-box-buttons-div">
+                <button id="sub-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check-icon lucide-badge-check"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><p>Subscriptions</p></button>        
+                <button id="exp-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg><p>Explore</p></button>
+                <button id="set-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/><path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg><p>Settings</p></button>
+  
+            </div>
+
+
+            <div id="left-box-widget">
+
+
+            </div>
+               <!-- <section id="sponsor-section">Become a Sponsor 💜</section>-->
+            
+
+        </div>
+
+
+
+        <div id="right-box">
+
+            
+
+
+            <section id="profile-section">
+
+                <div></div>
+
+                <button id="minimize-button">-</button>
+              
+
+                <img src="6.png" id="profile-img">
+
+                <p>cebolitos.com.br</p>
+
+                <div id="profile-section-buttons"> 
+                    <button> log in
+
+                    </button>
+
+                    <button> sign up
+                        
+                    </button>
+                </div>
+
+                <div></div>
+
+            </section>
+            <!--<div id="add-your-ad">add your ad here!</div>-->
+            <section id="widget">
+                <div></div>
+                <p id="widget-title">Lorem ipsum dolor sit amet ret</p>
+                <img src="5.png" >
+                <p id="widget-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+               <!-- <a id="add-your-ad">add your ad here</a>-->
+                <div></div>
+            </section> 
+
+            
+            
+        </div>
+    </div>
+
+
+
+    <div id="feed">
+        <article class="feed__item">
+            <div class="article-profile">
+                <div class="article-profile-left">
+                    <img src="1.jpg" class="blog-favicon">
+                    <a>doritos.com</a>
+                    <time class="article-data">04/01/2026</time>
+                </div>
+                <button class="article-subscribe-button">subscribe</button>
+            </div>
+            <h2 class="article-title">teste título teste titulo teste titulo</h2>
+            <img src="img.jpg" class="article-img">
+            <div class="article-bottom">
+                <div class="article-rating">
+                   <button class="up-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>
+                    </button>
+                    <button class="down-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/></svg>
+                    </button>
+                    <p id="ranking-number">10</p>
+                </div>
+                <button class="flag-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ><path d="M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5"/></svg>
+                </button>
+            </div>
+        </article> 
+   <article class="feed__item">
+            <div class="article-profile">
+                <div class="article-profile-left">
+                    <img src="3.png" class="blog-favicon">
+                    <a>doritos.com</a>
+                    <time class="article-data">04/01/2026</time>
+                </div>
+                <button class="article-subscribe-button">subscribe</button>
+            </div>
+            <h2 class="article-title">teste título teste titulo teste titulo</h2>
+            <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="article-bottom">
+                <div class="article-rating">
+                   <button class="up-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>
+                    </button>
+                    <button class="down-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/></svg>
+                    </button>
+                    <p id="ranking-number">10</p>
+                </div>
+                <button class="flag-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ><path d="M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5"/></svg>
+                </button>
+            </div>
+        </article>
+        <article class="feed__item">
+            <div class="article-profile">
+                <div class="article-profile-left">
+                    <img src="2.png" class="blog-favicon">
+                    <a>doritos.com</a>
+                    <time class="article-data">04/01/2026</time>
+                </div>
+                <button class="article-subscribe-button">subscribe</button>
+            </div>
+            <h2 class="article-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
+            <img src="img-2.jpg"  class="article-img"> <!--https://pixabay.com/pt/images/search/paisagem/-->
+            <div class="article-bottom">
+                <div class="article-rating">
+                   <button class="up-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>
+                    </button>
+                    <button class="down-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/></svg>
+                    </button>
+                    <p id="ranking-number">10</p>
+                </div>
+                <button class="flag-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ><path d="M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5"/></svg>
+                </button>
+            </div>
+        </article>
+   <article class="feed__item">
+            <div class="article-profile">
+                <div class="article-profile-left">
+                    <img src="3.png" class="blog-favicon">
+                    <a>doritos.com</a>
+                    <time class="article-data">04/01/2026</time>
+                </div>
+
+                <button class="article-subscribe-button">subscribe</button>
+            </div>
+            <h2 class="article-title">teste título teste titulo teste titulo</h2>
+            <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="article-bottom">
+                <div class="article-rating">
+                   <button class="up-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>
+                    </button>
+               
+                    <button class="down-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/></svg>
+                    </button>
+                
+                    <p id="ranking-number">10</p>
+                </div>
+                <button class="flag-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ><path d="M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5"/></svg>
+                </button>
+            </div>
+        </article>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
