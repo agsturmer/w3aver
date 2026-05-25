@@ -105,6 +105,7 @@ explore_button.addEventListener("click", function() {
 
 
 
+
 const new_post_button = document.getElementById("new-bt")
 
 const notifications_button = document.getElementById("not-bt")
@@ -113,26 +114,94 @@ const settings_button = document.getElementById("set-bt")
 
 const boomarks_button = document.getElementById("boo-bt")
 
+
 const body = document.body
 
 
-const new_post_section = document.createElement("section")
+const settings_section = document.getElementById("settings")
+const new_post_section = document.getElementById("new-post")
+const boomarks_section = document.getElementById("bookmarks")
+const notifications_section = document.getElementById("notifications")
+
+notifications_button.addEventListener("click", function() { 
+
+    notifications_section.style.display = "flex"
+    body.style.overflowY = "hidden"
+
+})
+
+boomarks_button.addEventListener("click", function() { 
+
+    boomarks_section.style.display = "flex"
+    body.style.overflowY = "hidden"
+
+})
 
 
-new_post_section.style.height = "100vh"
-new_post_section.style.width = "100vw"
-new_post_section.style.zIndex = "100"
-new_post_section.style.position = "absolute"
-new_post_section.style.top = "0"
-new_post_section.style.right = "0"
-new_post_section.style.backgroundColor = "#0f0f15"
+
+new_post_button.addEventListener("click", function() { 
+
+    new_post_section.style.display = "flex"
+    body.style.overflowY = "hidden"
 
 
-new_post_button.addEventListener("click", function() {
+})
+
+settings_button.addEventListener("click", function() {
 
 
-    new_post_section.innerHTML = "<p>Settings</p>"
-    body.append(new_post_section)
-
+    settings_section.style.display = "flex"
+    body.style.overflowY = "hidden"
     
 })
+
+
+go_back_button = document.querySelectorAll(".go-back-button")
+
+go_back_button.forEach((e) => {
+
+    e.addEventListener("click", function() {
+
+        e.parentElement.style.display = "none"
+        body.style.overflowY = "auto"
+        
+    })
+
+})
+
+
+
+
+
+/*===================================================================
+============================= SETTINGS ==============================
+====================================================================*/
+
+
+const dark_mode_div = document.getElementById("dark-mode-div")
+const light_mode_div = document.getElementById("light-mode-div")
+const font_size_div = document.getElementById("font-size-div")
+const language_div = document.getElementById("language-div") 
+
+dark_mode_div.addEventListener('click', function() {
+    const dark_mode_radio = dark_mode_div.querySelector('input[type="radio"]')
+    dark_mode_radio.checked = true;
+});
+
+light_mode_div.addEventListener('click', function() {
+    const light_mode_radio = light_mode_div.querySelector('input[type="radio"]')
+    light_mode_radio.checked = true;
+});
+
+
+font_size_div.addEventListener('click', function() {
+    const font_size_input = font_size_div.querySelector('input[type="number"]')
+    font_size_input.focus();
+});
+
+language_div.addEventListener('click', function() {
+    const language_select = language_div.querySelector('select')
+    language_select.focus();
+    language_select.style.display = "none"
+
+});
