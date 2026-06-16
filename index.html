@@ -6,11 +6,22 @@
     <title>W3aver - Where the internet comes alive</title>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
    
     <div id="container">
+
+
+    <!--
+    ===================================================================
+    ========================== LEFT BOX DIV =========================== 
+    =================================================================== 
+    -->  
 
         <div id="left-box">
 
@@ -27,7 +38,15 @@
                 <button id="exp-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg><p>Explore</p></button>
             </div>
 
+    <!--
+    ===================================================================
+    ======================== EXPLORE BOX DIV ========================== 
+    =================================================================== 
+    -->  
+
             <div id="explore-box">
+
+                <input placeholder="search for tags" id="explore-box-input" type="search">
 
 <button>Games</button>
 <button>Movies</button>
@@ -122,6 +141,12 @@
             </div>
 
 
+    <!--
+    ===================================================================
+    ==================== SUBSCRIPTIONS BOX DIV ======================== 
+    =================================================================== 
+    -->  
+
 
             <div id="subscriptions-box">
 
@@ -150,6 +175,12 @@
 
         </div>
 
+    <!--
+    ===================================================================
+    ========================== right BOX DIV ========================== 
+    =================================================================== 
+    -->  
+
         <div id="right-box">
 
             <section id="profile-section">
@@ -166,7 +197,6 @@
                 <div></div>
             </section>
 
-
             <div id="left-box-buttons-div">
                 <button id="new-bt" class="left-box-button"><svg id="plus-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><p>Create new post</p> </button>
                 <button id="not-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><p>Notifications</p></button>
@@ -174,6 +204,12 @@
                 <button id="boo-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg><p>Bookmarks</p></button>
   
             </div>
+
+    <!--
+    ===================================================================
+    =================== SETTINGS HIDEN SECTION ======================== 
+    =================================================================== 
+    -->  
 
 
             <section id="widget">
@@ -186,7 +222,11 @@
         </div>
     </div>
 
-
+    <!--
+    ===================================================================
+    ========================= SCROLL FEED DIV ========================= 
+    =================================================================== 
+    -->  
 
     <div id="feed">
         <article class="feed__item">
@@ -194,79 +234,60 @@
                 <div class="article-profile-left">
                     <img src="imgs/1.jpg" class="blog-favicon">
                     <a>doritos.com</a>
-                    <time class="article-data">04/01/2026</time>
                 </div>
                 <button class="article-subscribe-button">subscribe</button>
             </div>
             <h2 class="article-title">teste título teste titulo teste titulo</h2>
             <img src="imgs/img.jpg" class="article-img">
             <div class="article-bottom">
-                <div class="article-rating">
-                    <button class="up-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e4005f" stroke="#ffffff"><title xmlns="" fill="#e4005f" stroke="#ffffff">heart</title><path fill="#e4005f" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z" stroke="#ffffff"/></svg>
-                    </button>
-                    
-                    <p id="ranking-number">10</p>
-                </div>
-                <button class="flag-button">
+                <time class="article-data">2y ago</time>
+                <button class="bookmark-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
         </article> 
+
    <article class="feed__item">
             <div class="article-profile">
                 <div class="article-profile-left">
                     <img src="imgs/3.png" class="blog-favicon">
-                    <a>doritos.com</a>
-                    <time class="article-data">04/01/2026</time>
+                    <a>darkangel.net</a>
                 </div>
                 <button class="article-subscribe-button">subscribe</button>
             </div>
             <h2 class="article-title">teste título teste titulo teste titulo</h2>
             <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="article-bottom">
-                <div class="article-rating">
-                    <button class="up-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e4005f" stroke="#ffffff"><title xmlns="" fill="#e4005f" stroke="#ffffff">heart</title><path fill="#e4005f" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z" stroke="#ffffff"/></svg>
-                    </button>
-      
-                    <p id="ranking-number">10</p>
-                </div>
-                <button class="flag-button">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
+                <time class="article-data">1d ago</time>
+                <button class="bookmark-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
         </article>
+
         <article class="feed__item">
             <div class="article-profile">
                 <div class="article-profile-left">
                     <img src="imgs/2.png" class="blog-favicon">
                     <a>doritos.com</a>
-                    <time class="article-data">04/01/2026</time>
                 </div>
                 <button class="article-subscribe-button">subscribe</button>
             </div>
             <h2 class="article-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
-            <img src="imgs/img-2.jpg"  class="article-img"> 
+            <img src="imgs/img-2.jpg" class="article-img"> 
             <div class="article-bottom">
-                <div class="article-rating">
-                    <button class="up-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e4005f" stroke="#ffffff"><title xmlns="" fill="#e4005f" stroke="#ffffff">heart</title><path fill="#e4005f" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z" stroke="#ffffff"/></svg>
-                    </button>
-
-                    <p id="ranking-number">10</p>
-                </div>
-                <button class="flag-button">
+                <time class="article-data">3y ago</time>
+                <button class="bookmark-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
         </article>
+
    <article class="feed__item">
             <div class="article-profile">
                 <div class="article-profile-left">
                     <img src="imgs/3.png" class="blog-favicon">
                     <a>doritos.com</a>
-                    <time class="article-data">04/01/2026</time>
                 </div>
 
                 <button class="article-subscribe-button">subscribe</button>
@@ -274,14 +295,8 @@
             <h2 class="article-title">teste título teste titulo teste titulo</h2>
             <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="article-bottom">
-                <div class="article-rating">
-                    <button class="up-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e4005f" stroke="#ffffff"><title xmlns="" fill="#e4005f" stroke="#ffffff">heart</title><path fill="#e4005f" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z" stroke="#ffffff"/></svg>
-                    </button>
-                
-                    <p id="ranking-number">10</p>
-                </div>
-                <button class="flag-button">
+                <time class="article-data">1m ago</time>
+                <button class="bookmark-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
@@ -289,56 +304,70 @@
 
     </div>
 
-
-
-
+    <!--
+    ===================================================================
+    =================== BOOKMARKS HIDEN SECTION ======================= 
+    =================================================================== 
+    -->  
 
 
     <section id="bookmarks">
-        <button class="go-back-button">Go Back</button>
+        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
 
     </section>
+
+    <!--
+    ===================================================================
+    ================= NOTIFICATIONS HIDEN SECTION ===================== 
+    =================================================================== 
+    -->  
 
 
     <section id="notifications">
-        <button class="go-back-button">Go Back</button>
+        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
         
     </section>
 
-    <section id="new-post">
+    <!--
+    ===================================================================
+    =================== NEW POST HIDEN SECTION ======================== 
+    =================================================================== 
+    -->  
 
-        <button class="go-back-button">Go Back</button>
+    <section id="new-post">
+        
+        <h2>Create new post</h2>
+
+        <input>
+
+        <button>Publish your post</button>
+
+        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
 
     </section>
 
 
+    <!--
+    ===================================================================
+    =================== SETTINGS HIDEN SECTION ======================== 
+    =================================================================== 
+    -->  
 
     <section id="settings">
 
         <h2>Settings</h2>
-
         <p>Basic</p>
-
         <section>
 
-            
-
-
             <div id="dark-mode-div">Modo escuro <input  type="radio" name="modo"> </div>
-
-
             <div id="light-mode-div">Modo claro <input type="radio" name="modo"> </div>
-            
             <div id="font-size-div">Font size <input type="number"></div>
-
             <div id="language-div">Language 
 
                 <select>
-
                     <option>english</option>
                     <option>french</option>
                     <option>portuguese</option>
-
                 </select>
             </div>
         
@@ -350,28 +379,30 @@
             <button type="button">Copy your save settings</button>
             <button type="button">Paste your save settings</button>
         </section>
-
         <p>Account</p>
 
         <section>
-
             <button type="button">trocar senha</button>
             <button type="button">trocar domínio</button>
             <button type="button">Delete your account</button>
-
         </section>
 
+        <p>Hiden list</p>
 
-
-        <section>
-            <p>Blocked list</p>
+        <section id="block-list">
+            <div><button>anthony.com</button>  <button>x</div>
+            <div><button>ksksksk.com</button>  <button>x</div>
+            <div><button>nada.com</button>  <button>x</div>
+            <div><button>teste.com</button>  <button>x</div>
+            <div><button>testeteste.com</button>  <button>x</div>
         </section>
 
-
-        <button class="go-back-button">Go Back</button>
-
-
+        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
     </section>
+
+
+ 
+
 
 
     <script src="script.js"></script>
