@@ -55,16 +55,13 @@ table {
   width: 3px;               
   height: 5px;            
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;  
 }
-
 ::-webkit-scrollbar-thumb {
   background: #888;         
   border-radius: 10px;   
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(215, 215, 215);  
 }
@@ -73,14 +70,12 @@ table {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-
 html, body {
     overscroll-behavior: none;
     font-family: "Inter", sans-serif;
     color: white;
 
 }
-
 body {
 
     background-color: #0f0f15;
@@ -179,7 +174,7 @@ body {
     border-bottom: 0px solid rgba(255, 255, 255, 0.208);
 }
 
-.feed__item {
+.feed-item {
 
     width: 100%;
     gap: 10px;
@@ -194,10 +189,7 @@ body {
     border-top: 0;
     box-sizing: border-box;
 }
-/*
-.feed__item:hover {
-    border: 1px solid rgba(255, 255, 255, 0.417);  
-}*/
+
 #search {
 
     box-sizing: border-box;
@@ -521,10 +513,6 @@ body {
     letter-spacing: 1px;
     padding-left: 4px;
 }
-/*
-.article-data span {
-    color: #808080
-}*/
 
 .article-subscribe-button {
     height: 20px;
@@ -544,50 +532,6 @@ body {
     stroke-width: 2.5px;
 
 }
-
-/*
-.heart-button {
-    border: 0;
-    width: fit-content;
-    height: fit-content; 
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.heart-button:hover {
-    scale: 1.1;
-}
-
-.heart-button svg {
-    width: 21px;
-    height: 21px;
-    stroke-width: 1.3px; 
-    color: rgb(214, 40, 165);
-}
-
-.heart-button path {
-    fill: none;
-}
-
-.heart-button.active path {
-    fill: rgb(214, 40, 165);
-    stroke: currentColor;
-}
-
-
-.article-rating {
-    width: fit-content;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-}*/
 
 .bookmark-button {
     width: 30px;
@@ -753,6 +697,29 @@ body {
 }
 
 
+
+
+#icon-and-about {
+
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#icon-and-about a svg{
+
+    color: #666666;
+}
+
+
+
+
+
+
 #not-bt svg{
     width: 20px;
     height: 20px;
@@ -797,7 +764,6 @@ body {
     padding-top: 100px;
 
 }
-
 #settings h2, #new-post h2 {
 
     font-size: 2rem;
@@ -807,7 +773,6 @@ body {
     padding-bottom: 30px;
 
 }
-
 #settings p {
 
     max-width: 580px;
@@ -817,7 +782,6 @@ body {
     font-weight: 600;
     font-size: 2;
 }
-
 #settings section {
 
     max-width: 580px;
@@ -830,7 +794,6 @@ body {
     border-radius: 5px;
     
 }
-
 #settings section button {
     height: 54px;
     border: 0;
@@ -844,7 +807,6 @@ body {
     cursor: pointer;
 
 }
-
 #settings section div {
     height: 54px;
     border: 0;
@@ -861,8 +823,6 @@ body {
     justify-content: space-between;
     cursor: pointer;
 }
-
-
 #settings section select {
 
     border-radius: 0;
@@ -874,12 +834,10 @@ body {
     color: white;
 
 }
-
 #settings section div:hover, #settings section button:hover {
 
     background-color: #1e1e26;
 }
-
 #save-settings-button {
     background-color: rgba(250, 250, 250, 0.035) !important;
     border-radius: 5px;
@@ -888,11 +846,9 @@ body {
     margin-top: 20px;
 
 }
-
 #save-settings-button:hover {
     scale: 1.01;
 }
-
 #settings div > input[type="number"] {
 
     width: 28px;
@@ -904,38 +860,29 @@ body {
     box-sizing: border-box;
 
 }
-
 #settings div > input[type="number"]:focus {
     outline: 1px solid white;
     border: 0px solid black;
 }
-
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-
-
 #block-list {
     display: flex;
     flex-direction: column;
 
 
 }
-
 #block-list div {
     display: flex;
     flex-direction: row;
 
 }
-
 #block-list div button {
 
     width: fit-content;
@@ -943,40 +890,135 @@ input[type="number"] {
     color: #979797;
     padding: 0;
 }
-
 #block-list div > :first-child:hover {
     text-decoration: underline;
 }
-
-
 .go-back-button svg{
     color: rgb(126, 126, 126);
    
 }
 
 /*===========================================================
-====================== HIDDEN SECTION =======================
+==================== NEW POST SECTION =======================
 ============================================================*/
 
-#new-post input {
+#new-post input[type="url"] {
 
-    max-width: 540px;
+    max-width: 580px;
     text-align: start;
     width: 92%;
-    font-size: 1.2rem;
-    font-weight:5600;
-    font-size: 2;
+    
+    font-size: 0.9rem;
     background-color: transparent;
-    height: 44px;
-    border-radius: 20px;
-    border: 1px solid rgb(141, 141, 141);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.208);
     color: white;
-    padding-left: 14px;
+    padding: 14px;
+    
 }
 
-#new-post input:focus {
-    outline: 1px solid white;
+#new-post label {
+
+    color: #b0b0b0;
+    font-weight: 400;
+    font-size: 0.9rem;
 }
+
+#new-post input[type="url"]:focus {
+    outline: 1px solid rgb(142, 142, 142);
+}
+
+#new-post label {
+
+    max-width: 580px;
+    width: 92%;
+
+}
+
+
+
+#new-post > div img {
+    width: 100%;
+
+}
+
+
+#new-post-div {
+
+    border: 1px solid rgba(255, 255, 255, 0.208);
+    padding: 10px;
+    max-width: 580px;
+    width: 92%;
+    gap: 10px;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+#publish-agreement {
+    border: 1px solid rgba(255, 255, 255, 0.208);
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 24px;    
+}
+
+
+
+#publish-button-div {
+    max-width: 580px;
+    width: 92%;
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    color: #666666;
+}
+
+#verify-button-div {
+    max-width: 580px;
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    color: #666666;
+}
+
+#verify-button {
+    width: fit-content;
+    padding: 14px;
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.208);
+    color: white;
+
+}
+
+#publish-button {
+    width: 180px;
+    height: 48px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 0px solid white;
+    
+    
+}
+
+
+
+
+/*===========================================================
+===================== PROFILES SECTION ======================
+============================================================*/
+
+
 
 #profiles-feed {
 
@@ -995,11 +1037,10 @@ input[type="number"] {
 
 #profiles-feed > article {
 
-    
     padding-top: 14px;
-
     border-top: 1px solid rgba(255, 255, 255, 0.208);
     border-bottom: 0px solid rgba(255, 255, 255, 0.208);
+
 }
 #profiles-top {
 
@@ -1022,11 +1063,9 @@ input[type="number"] {
     cursor: pointer;
  
 }
-
 #profiles-top:hover {
     background-color: #181820;
 }
-
 #profiles-top-background {
     width: 580px;
     position: fixed;
@@ -1041,7 +1080,6 @@ input[type="number"] {
     
 
 }
-
 #profiles-middle {
 
     justify-content: center;
@@ -1054,7 +1092,6 @@ input[type="number"] {
     flex-direction: column;
     gap: 34px;
 }
-
 #profiles-feed > div > p {
     max-width: 580px;
     width: 86%;
@@ -1065,7 +1102,6 @@ input[type="number"] {
     word-spacing: 1px;
 
 }
-
 #profiles-buttons {
     
     max-width: 580px;
@@ -1079,12 +1115,10 @@ input[type="number"] {
 
     
 }
-
 #profiles-buttons button:hover {
 
     scale: 1.02;
 }
-
 #profiles-buttons button {
 
     border: 1px solid rgba(255, 255, 255, 0.208);
@@ -1095,13 +1129,11 @@ input[type="number"] {
     cursor: pointer;
 
 }
-
 #profiles-buttons button svg {
     width: 18px;
     color: #c4c4c4;
     margin-top: 4px;
 }
-
 #profiles-buttons #subscribe {
 
     width: 140px;
@@ -1110,22 +1142,18 @@ input[type="number"] {
     border: 0px solid black;
     
 }
-
 #profiles-buttons #block {
 
     width: 100px;
     height: 40px;
 
 }
-
 #profiles-buttons #flag {
 
     width: 44px;
     height: 40px;
 
 }
-
-
 #profile-favicon {
 
     width: 40px;
@@ -1133,8 +1161,6 @@ input[type="number"] {
     
     border-radius: 50%;
 }
-
-
 #profile-tags {
 
     width: 90%;
@@ -1145,7 +1171,6 @@ input[type="number"] {
     column-gap: 8px;
 
 }
-
 #profile-tags  button {
 
     background-color: transparent;

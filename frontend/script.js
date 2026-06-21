@@ -410,7 +410,7 @@ blog_favicon.forEach((e) => {
         </div>
 
     </div>
-            <article class="feed__item">
+            <article class="feed-item">
             <div class="article-profile">
                 <div class="article-profile-left">
                     <img src="imgs/1.jpg" class="blog-favicon">
@@ -429,7 +429,7 @@ blog_favicon.forEach((e) => {
         </article> 
 
 
-            <article class="feed__item">
+            <article class="feed-item">
             <div class="article-profile">
                 <div class="article-profile-left">
                     <img src="imgs/1.jpg" class="blog-favicon">
