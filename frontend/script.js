@@ -1,13 +1,4 @@
-/*const heart_button = document.querySelectorAll(".heart-button")
-
-heart_button.forEach(bt => {
-
-    bt.addEventListener("click", function() {
-        this.classList.toggle("active")
-    })
-})*/
-
-const bookmark_button = document.querySelectorAll(".bookmark-button")
+const bookmark_button = document.querySelectorAll(".post__bookmark-button")
 
 bookmark_button.forEach(bt => {
 
@@ -17,7 +8,7 @@ bookmark_button.forEach(bt => {
 })
 
 
-const article_subscribe_button = document.querySelectorAll(".article-subscribe-button")
+const article_subscribe_button = document.querySelectorAll(".post__subscribe")
 
 
 article_subscribe_button.forEach(bt => {
@@ -27,7 +18,7 @@ article_subscribe_button.forEach(bt => {
         this.classList.toggle("active")
 
         if (this.classList.contains("active")) {
-            this.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`
+            this.innerHTML = `<svg class="post__subscribe-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`
  
         } else 
             this.innerHTML = "subscribe" 
@@ -71,7 +62,7 @@ const explore_button = document.getElementById("exp-bt")
 
 const explore_box = document.getElementById("explore-box")
 
-const subscriptions_box = document.getElementById("subscriptions-box")
+const subscriptions_box = document.getElementById("subscriptions")
 
 let subscriptions_box_option
 let explore_box_option
@@ -160,105 +151,11 @@ explore_button.addEventListener("click", function() {
 })
 
 
-const new_post_button = document.getElementById("new-bt")
-
-const notifications_button = document.getElementById("not-bt")
-
-const settings_button = document.getElementById("set-bt") 
-
-const boomarks_button = document.getElementById("boo-bt")
-
-
-const body = document.body
-
-
-const settings_section = document.getElementById("settings")
-const new_post_section = document.getElementById("new-post")
-const boomarks_section = document.getElementById("bookmarks")
-const notifications_section = document.getElementById("notifications")
-
-notifications_button.addEventListener("click", function() { 
-
-    notifications_section.style.display = "flex"
-    body.style.overflowY = "hidden"
-
-})
-
-boomarks_button.addEventListener("click", function() { 
-
-    boomarks_section.style.display = "flex"
-    body.style.overflowY = "hidden"
-
-})
-
-
-
-new_post_button.addEventListener("click", function() { 
-
-    new_post_section.style.display = "flex"
-    body.style.overflowY = "hidden"
-
-
-})
-
-settings_button.addEventListener("click", function() {
-
-
-    settings_section.style.display = "flex"
-    body.style.overflowY = "hidden"
-    
-})
-
-
-go_back_button = document.querySelectorAll(".go-back-button")
-
-go_back_button.forEach((e) => {
-
-    e.addEventListener("click", function() {
-
-        e.parentElement.style.display = "none"
-        body.style.overflowY = "auto"
-        
-    })
-
-})
-
-
-
-
 
 /*===================================================================
 ============================= SETTINGS ==============================
 ====================================================================*/
 
-
-const dark_mode_div = document.getElementById("dark-mode-div")
-const light_mode_div = document.getElementById("light-mode-div")
-const font_size_div = document.getElementById("font-size-div")
-const language_div = document.getElementById("language-div") 
-
-dark_mode_div.addEventListener('click', function() {
-    const dark_mode_radio = dark_mode_div.querySelector('input[type="radio"]')
-    dark_mode_radio.checked = true;
-});
-
-light_mode_div.addEventListener('click', function() {
-    const light_mode_radio = light_mode_div.querySelector('input[type="radio"]')
-    light_mode_radio.checked = true;
-});
-
-
-font_size_div.addEventListener('click', function() {
-    const font_size_input = font_size_div.querySelector('input[type="number"]')
-    font_size_input.focus();
-});
-
-language_div.addEventListener('click', function() {
-    const language_select = language_div.querySelector('select')
-    language_select.showPicker();
-    
-
-});
 
 
 
@@ -304,7 +201,7 @@ explore_box_input.addEventListener("input", function () {
 
 const feed = document.getElementById("feed")
 
-const blog_favicon = document.querySelectorAll(".blog-favicon")
+const blog_favicon = document.querySelectorAll(".post__favicon")
 const profiles = document.getElementById("profiles")
 
 
@@ -355,105 +252,160 @@ function profile_bookmarks_and_subscribe() {
 
 
 
-blog_favicon.forEach((e) => {
 
-    e.addEventListener("click", function () {
 
-        feed.innerHTML = `
+
+
+
+
+
+
+
+
+
+
+
+
+const widget = document.getElementById("widget")
+const widget_title =  document.getElementById("widget-title")
+const widget_img =  document.getElementById("widget-img")
+const widget_text = document.getElementById("widget-text")
+const widget_left_buttom = document.getElementById("widget-left-buttom")
+const widget_right_buttom = document.getElementById("widget-right-buttom")
+const widget_dots = document.getElementById("widget-dots")
+
+let ads = []
+
+
+let widget_content_index = 0
+
+
+
+function replace_widget_content() {
+
+    widget_title.innerText = ads[widget_content_index].titulo
+
+    widget_img.src = ads[widget_content_index].src
+
+    widget_text.innerText = ads[widget_content_index].texto
+
+
+    for (let i = 0; i < ads.length; i++) {
+
+        const dot =  widget_dots.children[i]
         
-       
-     
-<div id="profiles-feed">
+        if (dot === widget_dots.children[widget_content_index]) {
 
-    <div id="profiles-top-background"></div>
+            dot.style.color = 'white'
+            
+        } else {
 
-    <button id="profiles-top">
+           dot.style.color = ''
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        }
 
-        <h2>doritos.com</h2>
+    }
 
-    </button>
-
-     <div id="profiles-middle">
+}
 
 
-        
+widget_left_buttom.addEventListener(("click"), function() {
 
-       <div id="profiles-buttons">
-
-       <img src="imgs/1.jpg" id="profile-favicon">
-
-            <button id="subscribe">Subscribe</button>
-            <button id="block">Hide</button>
-            <button id="flag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5"/></svg></button>
-        </div>
+    if (ads.length === 0) return
 
 
-        <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-        </p>
+    widget_content_index -= 1
 
+    if (widget_content_index < 0) {
 
-        <div id="profile-tags">
-            <button>Games</button>
-            <button>Movies</button>
-            <button>TV Shows</button>
-            <button>Anime</button>
-            <button>Manga</button>
-            <button>Comics</button>
-            <button>Music</button>
-            <button>K-Pop</button>
-            <button>Board Games</button>
-            <button>RPG</button>
-            <button>Streaming</button>
-        </div>
+        widget_content_index = (ads.length - 1)
+    }
 
-    </div>
-            <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/1.jpg" class="blog-favicon">
-                    <a>doritos.com</a>
-                </div>
-                <button class="article-subscribe-button">subscribe</button>
-            </div>
-            <h2 class="article-title">teste título teste titulo teste titulo</h2>
-            <img src="imgs/img.jpg" class="article-img">
-            <div class="article-bottom">
-                <time class="article-data">1d ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
-                </button>
-            </div>
-        </article> 
+    replace_widget_content()
+})
 
+widget_right_buttom.addEventListener(("click"), function() {
 
-            <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/1.jpg" class="blog-favicon">
-                    <a>doritos.com</a>
-                </div>
-                <button class="article-subscribe-button">subscribe</button>
-            </div>
-            <h2 class="article-title">teste título teste titulo teste titulo</h2>
-            <img src="imgs/img.jpg" class="article-img">
-            <div class="article-bottom">
-                <time class="article-data">3y ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
-                </button>
-            </div>
-        </article> `
+    if (ads.length === 0) return
+    
+    widget_content_index += 1
+    
+    if (widget_content_index >= ads.length) {
 
-        profile_bookmarks_and_subscribe()
-
-
-    })
+        widget_content_index = 0
+    }
+    
+    replace_widget_content()
 })
 
 
+function shuffle(array) {
+
+    for (let i = array.length - 1; i > 0; i--) {
+
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
+    }
+
+    ads = array
+
+    replace_widget_content()
+}
+
+async function load_widget_content() {
+
+    try {
+        const response = await fetch('ads/ads.json')
+        const response_json = await response.json()
+        const dots_index = 0
+
+        
+
+
+        response_json.forEach((ad) => {
+
+            widget_dots.innerHTML += "<p>.</p>"
+        })
+
+        shuffle(response_json)
+
+
+    }
+
+    catch (error) {
+        
+        //  AJUSTAR ISSO !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        /*widget_title.innerText = ads[widget_content_index].titulo
+
+        widget_img.innerHTML = ads[widget_content_index].src
+
+        widget_text.innerText = ads[widget_content_index].texto*/
+    }
+    
+}
+
+load_widget_content()
 
 
 
+setInterval(function() {
+    
+
+    if (widget_content_index < 0) {
+
+        widget_content_index = (ads.length - 1)
+
+    } else if (widget_content_index >= ads.length) {
+
+        widget_content_index = 0
+
+    } else {
+
+        widget_content_index += 1
+    }
+    
+
+    replace_widget_content()
+
+}, (10 * 60 * 1000))

@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W3aver - Where the internet comes alive</title>
 
-    <!--  src="/static/style.css" -->
+    
+    <meta name="robots" content="noai, noimageai">
 
-    <link rel="stylesheet" href="style.css">
+    <!--  src="/static/style.min.css" -->
 
+    <link rel="stylesheet" href="style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script src="htmx.min.js"></script>
+
 
 </head>
 <body>
@@ -26,27 +31,21 @@
     =================================================================== 
     -->  
 
-        <div id="left-box">
+    <div class="nav-sidebar">
 
-            <div id="icon-and-about">
+        <div class="nav-sidebar__header">
+            <img class="nav-sidebar__title" src="imgs/w3aver.png" alt="w3aver">
+            <a data-hx-boost="true" href="about.html" class="nav-sidebar__about-link"><svg class="nav-sidebar__about-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/></svg></a></div>
+    
+        <search class="nav-sidebar__search">
+            <input class="nav-sidebar__search-input" type="search" placeholder="search for websites">
+            <svg class="nav-sidebar__search-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
+        </search>
 
-                <img id="title" src="imgs/w3aver.png"> <!-- font: Dangrek -->
-
-                <a href="about.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                </svg></a>
-
-            </div>
-           
-            <search id="search">
-                <input id="search-input" type="search" placeholder="search for websites"><svg id="search-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
-            </search>
-
-            <div id="left-box-buttons-div">
-                <button id="sub-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check-icon lucide-badge-check"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><p>Subscriptions</p></button>        
-                <button id="exp-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg><p>Explore</p></button>
-            </div>
+        <div class="nav-sidebar__buttons-box">
+            <button id="sub-bt" class="nav-sidebar__button"><svg class="nav-sidebar__button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><p class="nav-sidebar__button-p">Subscriptions</p></button>        
+            <button id="exp-bt" class="nav-sidebar__button"><svg class="nav-sidebar__button-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg><p class="nav-sidebar__button-p">Explore</p></button>
+        </div>  
 
     <!--
     ===================================================================
@@ -54,9 +53,9 @@
     =================================================================== 
     -->  
 
-            <div id="explore-box">
+            <div id="explore-box" class="nav-sidebar__eplore">
 
-                <input placeholder="search for tags" id="explore-box-input" type="search">
+                <input placeholder="search for tags" class="nav-sidebar__explore-input" id="explore-box-input" type="search">
 
 <button>Games</button>
 <button>Movies</button>
@@ -158,7 +157,7 @@
     -->  
 
 
-            <div id="subscriptions-box">
+            <div id="subscriptions" class="nav-sidebar__subscriptions">
 
                 <button type="button">AuraNode.com</button>
                 <button type="button">Veloz.io</button>
@@ -191,42 +190,55 @@
     =================================================================== 
     -->  
 
-        <div id="right-box">
+        <div class="user-sidebar">
 
-            <section id="profile-section">
+            <section class="user-sidebar__profile">
 
                 <div></div>
 
-                <img src="imgs/6.png" id="profile-img">
+                <div class="user-sidebar__profile-img-div">
+                    <img class="user-sidebar__profile-img" src="imgs/1.jpg">
+                </div>
+                
 
                 <p>cebolitos.com.br</p>
 
-                    <button id="exit-button">Exit</button>
+                    <button class="user-sidebar__exit-button">Exit</button>
                
 
                 <div></div>
             </section>
 
-            <div id="left-box-buttons-div">
-                <button id="new-bt" class="left-box-button"><svg id="plus-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><p>Create new post</p> </button>
-                <button id="not-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><p>Notifications</p></button>
-                <button id="set-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/><path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg><p>Settings</p></button>        
-                <button id="boo-bt" class="left-box-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg><p>Bookmarks</p></button>
+            <div>
+                <a hx-boost="true" href="user-sidebar/create-post.html" id="new-bt" class="user-sidebar__button"><svg class="user-sidebar__button-svg" id="plus-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><p class="user-sidebar__button-p">Create post</p> </a>
+                <a hx-boost="true" id="not-bt" class="user-sidebar__button"><svg class="user-sidebar__button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><p class="user-sidebar__button-p">Notifications</p></a>
+                <a hx-boost="true" href="user-sidebar/settings.html" id="set-bt" class="user-sidebar__button"><svg class="user-sidebar__button-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/><path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg><p class="user-sidebar__button-p">Settings</p></a>        
+                <a hx-boost="true" href="user-sidebar/bookmarks.html" id="boo-bt" class="user-sidebar__button"><svg class="user-sidebar__button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg><p class="user-sidebar__button-p">Bookmarks</p></a>
             </div>
 
     <!--
     ===================================================================
-    =================== SETTINGS HIDEN SECTION ======================== 
+    ======================== WIDGET SECTION =========================== 
     =================================================================== 
     -->  
 
 
-            <section id="widget">
+            <section class="widget" id="widget">
                 <div></div>
-                <p id="widget-title">Lorem ipsum dolor sit amet ret</p>
-                <img src="imgs/5.png" >
-                <p id="widget-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+                
+                
+                <div class="widget__ad">
+                    <p id="widget-title" class="widget__ad-title">Lorem ipsum dolor sit amet ret</p>
+                    <img id="widget-img" class="widget__ad-img" src="imgs/5.png" >
+                    <p id="widget-text" class="widget__ad-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                
+                <div class="widget__index"> <button id="widget-left-buttom" class="widget__left-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg> </button>      <div class="widget__dots" id="widget-dots"></div>          <button id="widget-right-buttom" class="widget__right-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg> </button></div>
+
+                
                 <div></div>
+
             </section>             
         </div>
 
@@ -238,91 +250,47 @@
     =================================================================== 
     -->  
 
-    <div id="feed">
-        <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/1.jpg" class="blog-favicon">
-                    <a>doritos.com</a>
+    <div class="feed" id="feed">
+        <article class="post">
+            <div class="post__profile">
+                <div class="post__profile-left">
+                    <img src="imgs/1.jpg" class="post__favicon">
+                    <a hx-get="nav-sidebar/users.html" hx-target="#feed" class="post__profile-name">doritos.com</a> <!-- hx-push-url="true" -->
                 </div>
-                <button class="article-subscribe-button">subscribe</button>
+                <button class="post__subscribe">subscribe</button>
             </div>
-            <h2 class="article-title">Título teste para W3aver</h2>
-            <img src="https://agsturmer.github.io/example/img.jpg" class="article-img">
-            <div class="article-bottom">
-                <time class="article-data">2y ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
+            <h2 class="post__title">Título teste para W3aver</h2>
+            <img src="https://agsturmer.github.io/example/img.jpg" class="post__img">
+            <div class="post__bottom">
+                <time class="post__data">2y ago</time>
+                <button class="post__bookmark-button">
+                    <svg class="post__bookmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
         </article> 
 
-   <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/3.png" class="blog-favicon">
-                    <a>darkangel.net</a>
+
+        <article class="post">
+            <div class="post__profile">
+                <div class="post__profile-left">
+                    <img src="imgs/3.png" class="post__favicon">
+                    <a hx-get="nav-sidebar/users.html" hx-target="#feed" class="post__profile-name">darkangel.net</a>
                 </div>
-                <button class="article-subscribe-button">subscribe</button>
+                <button class="post__subscribe">subscribe</button>
             </div>
-            <h2 class="article-title">teste título teste titulo teste titulo</h2>
-            <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="article-bottom">
-                <time class="article-data">1d ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
+            <h2 class="post__title">teste título teste titulo teste titulo</h2>
+            <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="post__bottom">
+                <time class="post__data">1d ago</time>
+                <button class="post__bookmark-button">
+                    <svg class="post__bookmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
                 </button>
             </div>
         </article>
 
-        <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/2.png" class="blog-favicon">
-                    <a>doritos.com</a>
-                </div>
-                <button class="article-subscribe-button">subscribe</button>
-            </div>
-            <h2 class="article-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
-            <img src="imgs/img-2.jpg" class="article-img"> 
-            <div class="article-bottom">
-                <time class="article-data">3y ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
-                </button>
-            </div>
-        </article>
-
-   <article class="feed-item">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/3.png" class="blog-favicon">
-                    <a>doritos.com</a>
-                </div>
-
-                <button class="article-subscribe-button">subscribe</button>
-            </div>
-            <h2 class="article-title">teste título teste titulo teste titulo</h2>
-            <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="article-bottom">
-                <time class="article-data">1m ago</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
-                </button>
-            </div>
-        </article>
 
     </div>
 
-    <!--
-    ===================================================================
-    =================== BOOKMARKS HIDEN SECTION ======================= 
-    =================================================================== 
-    -->  
-    <section id="bookmarks">
-        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
-
-    </section>
 
     <!--
     ===================================================================
@@ -335,123 +303,6 @@
         
     </section>
 
-    <!--
-    ===================================================================
-    =================== NEW POST HIDEN SECTION ======================== 
-    =================================================================== 
-    -->  
-
-    <section id="new-post">
-        
-        <h2>Create new post</h2>
-
-        <input type="url" placeholder="Paste your url here...">
-
-
-
-        <label>
-            <input type="radio" name="img-or-description" value="image"> add an image
-        </label>
-        
-        <label>
-            <input type="radio" name="img-or-description" value="description"> add a description
-        </label>
-
-        <div id="verify-button-div">
-            <button id="verify-button">Verify</button>
-           <!-- <p>Successfully verified!</p> -->
-        </div>
-
-
-        <article id="new-post-div">
-            <div class="article-profile">
-                <div class="article-profile-left">
-                    <img src="imgs/1.jpg" class="blog-favicon">
-                    <a>doritos.com</a>
-                </div>
-                <button class="article-subscribe-button">subscribe</button>
-            </div>
-            <p class="article-title">Título teste para W3aver</p>
-            <img src="https://agsturmer.github.io/example/img.jpg" class="article-img">
-            <div class="article-bottom">
-                <time class="article-data">now</time>
-                <button class="bookmark-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
-                </button>
-            </div>
-        </article> 
-
-        
-
-        <label id="publish-agreement">
-            <input type="checkbox" name="img-or-description" value="image"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </label>
-
-
-        <div id="publish-button-div">
-            <button id="publish-button">Publish your post</button>
-        </div>
-        
-
-        
-
-        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
-
-    </section>
-
-
-    <!--
-    ===================================================================
-    =================== SETTINGS HIDEN SECTION ======================== 
-    =================================================================== 
-    -->  
-
-    <section id="settings">
-
-        <h2>Settings</h2>
-        <p>Basic</p>
-        <section>
-
-            <div id="dark-mode-div">Modo escuro <input  type="radio" name="modo"> </div>
-            <div id="light-mode-div">Modo claro <input type="radio" name="modo"> </div>
-            <div id="font-size-div">Font size <input type="number"></div>
-            <div id="language-div">Language 
-
-                <select>
-                    <option>english</option>
-                    <option>french</option>
-                    <option>portuguese</option>
-                </select>
-            </div>
-        
-            <button type="submit" id="save-settings-button">Save Changes</button>
-        </section>
-
-        <p>Save </p>        
-        <section>
-            <button type="button">Copy your save settings</button>
-            <button type="button">Paste your save settings</button>
-        </section>
-        <p>Account</p>
-
-        <section>
-            <button type="button">trocar senha</button>
-            <button type="button">trocar domínio</button>
-            <button type="button">Delete your account</button>
-        </section>
-
-        <p>Hiden list</p>
-
-        <section id="block-list">
-            <div><button>anthony.com</button>  <button>x</div>
-            <div><button>ksksksk.com</button>  <button>x</div>
-            <div><button>nada.com</button>  <button>x</div>
-            <div><button>teste.com</button>  <button>x</div>
-            <div><button>testeteste.com</button>  <button>x</div>
-        </section>
-
-        <button class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
-    </section>
 
 <!--  src="/static/script.js" -->
 

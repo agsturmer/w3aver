@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Settings</title>
+
+
+    
+
+
+</head>
+<body>
+
+
+    <section id="settings" class="settings">
+
+        <h1 class="settings__title">Settings</h1>
+        <h2>Basic</h2>
+        <section class="settings__section">
+
+            <div class="settings__button" id="dark-mode-div">Modo escuro <input  type="radio" name="modo"> </div>
+            <div class="settings__button" id="light-mode-div">Modo claro <input type="radio" name="modo"> </div>
+            <div class="settings__button" id="font-size-div">Font size <input class="settings__number-input" type="number"></div>
+            <div class="settings__button" id="language-div">Language 
+
+                <select class="settings__select">
+                    <option>english</option>
+                    <option>french</option>
+                    <option>portuguese</option>
+                </select>
+            </div>
+        
+            <button class="settings__button settings__save-button" type="submit" >Save Changes</button>
+        </section>
+
+        <h2>Save </h2>        
+        <section class="settings__section">
+            <button class="settings__button" type="button">Copy your save settings</button>
+            <button class="settings__button" type="button">Paste your save settings</button>
+        </section>
+        <h2>Account</h2>
+
+        <section class="settings__section">
+            <button class="settings__button" type="button">trocar senha</button>
+            <button class="settings__button" type="button">trocar domínio</button>
+            <button class="settings__button" type="button">Delete your account</button>
+        </section>
+
+        <h2>Hiden list</h2>
+
+        <section class="settings__section settings__block-list">
+            <div class="settings__button"><button>anthony.com</button>  <button>x</button></div>
+            <div class="settings__button"><button>ksksksk.com</button>  <button>x</button></div>
+            <div class="settings__button"><button>nada.com</button>  <button>x</button></div>
+            <div class="settings__button"><button>teste.com</button>  <button>x</button></div>
+            <div class="settings__button"><button>testeteste.com</button>  <button>x</button></div>
+        </section>
+
+        <a href="../index.html" class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></a>
+    </section>
+
+    <script>
+        
+
+const dark_mode_div = document.getElementById("dark-mode-div")
+const light_mode_div = document.getElementById("light-mode-div")
+const font_size_div = document.getElementById("font-size-div")
+const language_div = document.getElementById("language-div") 
+
+dark_mode_div.addEventListener('click', function() {
+    const dark_mode_radio = dark_mode_div.querySelector('input[type="radio"]')
+    dark_mode_radio.checked = true;
+});
+
+light_mode_div.addEventListener('click', function() {
+    const light_mode_radio = light_mode_div.querySelector('input[type="radio"]')
+    light_mode_radio.checked = true;
+});
+
+
+font_size_div.addEventListener('click', function() {
+    const font_size_input = font_size_div.querySelector('input[type="number"]')
+    font_size_input.focus();
+});
+
+language_div.addEventListener('click', function() {
+    const language_select = language_div.querySelector('select')
+    language_select.showPicker();
+    
+
+});
+
+    </script>
+</body>

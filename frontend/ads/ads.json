@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Lorem Ipsum Dolor",
+    "src": "../imgs/5.png",
+    "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "titulo": "Consectetur Adipiscing",
+    "src": "../imgs/4.png",
+    "texto": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "titulo": "Tempor Incididunt",
+    "src": "https://picsum.photos/id/103/600/400",
+    "texto": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
