@@ -27,13 +27,12 @@ article_subscribe_button.forEach(bt => {
 })
 
 
-
-
+/*=============================================================================
+============================= EXPLORE BOX COLORS ==============================
+===============================================================================*/
 
 
 const explore_box_button = document.getElementById("explore-box").querySelectorAll("button")
-
-
 explore_box_button.forEach(bt => {
 
 bt.addEventListener("mouseenter", function() {
@@ -87,12 +86,6 @@ if (subscriptions_box.querySelectorAll("button").length > 0) {
     explore_button.querySelector("svg").style.color = "white"
 
 }
-
-
-
-
-
-
 
 
 
@@ -152,15 +145,9 @@ explore_button.addEventListener("click", function() {
 
 
 
-/*===================================================================
-============================= SETTINGS ==============================
-====================================================================*/
-
-
-
-
-
-
+/*=============================================================================
+============================= EXPLORE BOX SEARCH ==============================
+===============================================================================*/
 
 
 const explore_box_input = document.getElementById("explore-box-input")
@@ -199,26 +186,18 @@ explore_box_input.addEventListener("input", function () {
 }) 
 
 
-const feed = document.getElementById("feed")
 
+/*=============================================================================
+========================= BOOKMARKS AND SUBSCRIBE =============================
+===============================================================================*/
+
+
+const feed = document.getElementById("feed")
 const blog_favicon = document.querySelectorAll(".post__favicon")
 const profiles = document.getElementById("profiles")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function profile_bookmarks_and_subscribe() {
-
 
     const bookmark_button = document.querySelectorAll(".bookmark-button")
 
@@ -257,155 +236,65 @@ function profile_bookmarks_and_subscribe() {
 
 
 
+import { user_sidebar_event } from '/js/user.js';
 
 
 
+const create_post_button = document.getElementById("create-post-button")
+const settings_button = document.getElementById("settings-button")
+const bookmarks_button = document.getElementById("bookmarks-button")
+
+
+const overlay = document.getElementById("overlay")
 
 
 
+create_post_button.addEventListener("click", function() {
 
-
-
-const widget = document.getElementById("widget")
-const widget_title =  document.getElementById("widget-title")
-const widget_img =  document.getElementById("widget-img")
-const widget_text = document.getElementById("widget-text")
-const widget_left_buttom = document.getElementById("widget-left-buttom")
-const widget_right_buttom = document.getElementById("widget-right-buttom")
-const widget_dots = document.getElementById("widget-dots")
-
-let ads = []
-
-
-let widget_content_index = 0
-
-
-
-function replace_widget_content() {
-
-    widget_title.innerText = ads[widget_content_index].titulo
-
-    widget_img.src = ads[widget_content_index].src
-
-    widget_text.innerText = ads[widget_content_index].texto
-
-
-    for (let i = 0; i < ads.length; i++) {
-
-        const dot =  widget_dots.children[i]
-        
-        if (dot === widget_dots.children[widget_content_index]) {
-
-            dot.style.color = 'white'
-            
-        } else {
-
-           dot.style.color = ''
-
-        }
-
-    }
-
-}
-
-
-widget_left_buttom.addEventListener(("click"), function() {
-
-    if (ads.length === 0) return
-
-
-    widget_content_index -= 1
-
-    if (widget_content_index < 0) {
-
-        widget_content_index = (ads.length - 1)
-    }
-
-    replace_widget_content()
-})
-
-widget_right_buttom.addEventListener(("click"), function() {
-
-    if (ads.length === 0) return
     
-    widget_content_index += 1
-    
-    if (widget_content_index >= ads.length) {
-
-        widget_content_index = 0
-    }
-    
-    replace_widget_content()
+    user_sidebar_event(overlay, "create-post")  
+ 
 })
 
 
-function shuffle(array) {
+bookmarks_button.addEventListener("click", function() {
 
-    for (let i = array.length - 1; i > 0; i--) {
-
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]
-    }
-
-    ads = array
-
-    replace_widget_content()
-}
-
-async function load_widget_content() {
-
-    try {
-        const response = await fetch('ads/ads.json')
-        const response_json = await response.json()
-        const dots_index = 0
-
-        
-
-
-        response_json.forEach((ad) => {
-
-            widget_dots.innerHTML += "<p>.</p>"
-        })
-
-        shuffle(response_json)
-
-
-    }
-
-    catch (error) {
-        
-        //  AJUSTAR ISSO !!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        /*widget_title.innerText = ads[widget_content_index].titulo
-
-        widget_img.innerHTML = ads[widget_content_index].src
-
-        widget_text.innerText = ads[widget_content_index].texto*/
-    }
     
-}
+    user_sidebar_event(overlay, "bookmarks")  
+ 
+})
 
-load_widget_content()
 
+settings_button.addEventListener("click", function() {
 
-
-setInterval(function() {
     
+    user_sidebar_event(overlay, "settings")  
+ 
+})
 
-    if (widget_content_index < 0) {
 
-        widget_content_index = (ads.length - 1)
 
-    } else if (widget_content_index >= ads.length) {
 
-        widget_content_index = 0
 
-    } else {
 
-        widget_content_index += 1
-    }
-    
 
-    replace_widget_content()
 
-}, (10 * 60 * 1000))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

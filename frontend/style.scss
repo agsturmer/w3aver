@@ -1398,28 +1398,28 @@ h1 {
 
 }
 
-.feed {
 
-    width: 580px;
-    height: fit-content;
-    background-color: rgba(0, 0, 0, 0);
-    margin-top: 11px;
-    margin-bottom: 11px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    border: 1px solid rgba(255, 255, 255, 0.208);
-    border-radius: 5px;
-    
+
+
+
+
+
+
+#overlay {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background-color: #0f0f15;
+    display: none;
+    justify-content: center;
+    overflow-x: hidden;
+    margin: 0;
+
 }
-
-
-
-
-
-
-
-
 
 
 
