@@ -208,13 +208,14 @@ body {
         border: 0px solid black;
         background-color: transparent;
         color: #ffffffb2;
-        padding-left: 10px;
+        padding-left: 48px;
+        padding-bottom: 2px;
         width: 100%;
         height: 100%;
         font-size: 0.95rem;
     }
 
-    &__search-inpu:focus {
+    &__search-input:focus {
 
         border: 0px solid white;
         outline: 0px solid white;
@@ -222,10 +223,10 @@ body {
 
     &__search-svg {
 
-        width: 34px;
-        height: 34px;
+        width: 18px;
+        height: 18px;
         position: absolute;
-        display: none; /* !!!!!!!!!!!!!! */
+        left: 16px;
         color: rgba(255, 255, 255, 0.295);
         
     }

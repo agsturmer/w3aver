@@ -1,4 +1,38 @@
-async function load_posts_json() {
+function icons_event() {
+
+    const bookmark_button = document.querySelectorAll(".post__bookmark-button")
+    const article_subscribe_button = document.querySelectorAll(".post__subscribe")
+
+    bookmark_button.forEach(bt => {
+
+        bt.addEventListener("click", function() {
+            this.classList.toggle("active")
+        })
+    })
+
+    article_subscribe_button.forEach(bt => {
+
+        bt.addEventListener("click", function() {
+
+            this.classList.toggle("active")
+
+            if (this.classList.contains("active")) {
+                this.innerHTML = `<svg class="post__subscribe-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`
+
+            } else 
+                this.innerHTML = "subscribe" 
+
+        })
+    })
+}
+
+
+
+
+
+
+
+export async function load_posts_json() {
 
     try {
         const response = await fetch('../api/posts.json')
@@ -58,7 +92,7 @@ async function load_posts_json() {
 
 
     }
-    
+
+    icons_event()
 }
 
-load_posts_json()
