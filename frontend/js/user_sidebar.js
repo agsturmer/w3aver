@@ -18,6 +18,25 @@ async function load_create_post_html(overlay, view_name) {
 
         history.pushState({}, '', `${view_name}`)
     
+
+
+
+        const local_data_text_area = document.getElementById("local-data-text-area")
+
+        local_data_text_area.addEventListener("input", function() {
+
+            local_data_text_area.style.height = 'auto'
+            local_data_text_area.style.height = local_data_text_area.scrollHeight + 'px';
+            console.log(local_data_text_area.scrollHeight)
+
+        })
+
+
+        
+
+
+
+
         const go_back_button = document.getElementById("go-back-button")
 
         go_back_button.addEventListener("click", function() {
@@ -42,7 +61,14 @@ export function user_sidebar_event() {
     const create_post_button = document.getElementById("create-post-button")
     const settings_button = document.getElementById("settings-button")
     const bookmarks_button = document.getElementById("bookmarks-button")
+    const local_data_button = document.getElementById("local-data-button") 
     const overlay = document.getElementById("overlay")
+
+    local_data_button.addEventListener("click", function() {
+  
+        load_create_post_html(overlay, "local-data")  
+    
+    })
 
 
     create_post_button.addEventListener("click", function() {

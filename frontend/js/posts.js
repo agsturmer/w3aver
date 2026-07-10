@@ -27,11 +27,6 @@ function icons_event() {
 }
 
 
-
-
-
-
-
 export async function load_posts_json() {
 
     try {
