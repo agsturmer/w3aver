@@ -2,6 +2,7 @@ async function load_create_post_html(overlay, view_name) {
 
     try {
 
+
         const html = await fetch(`views/${view_name}.html`)
 
         const html_text = await html.text()
@@ -18,25 +19,6 @@ async function load_create_post_html(overlay, view_name) {
 
         history.pushState({}, '', `${view_name}`)
     
-
-
-
-        const local_data_text_area = document.getElementById("local-data-text-area")
-
-        local_data_text_area.addEventListener("input", function() {
-
-            local_data_text_area.style.height = 'auto'
-            local_data_text_area.style.height = local_data_text_area.scrollHeight + 'px';
-            console.log(local_data_text_area.scrollHeight)
-
-        })
-
-
-        
-
-
-
-
         const go_back_button = document.getElementById("go-back-button")
 
         go_back_button.addEventListener("click", function() {
@@ -47,6 +29,58 @@ async function load_create_post_html(overlay, view_name) {
 
         })
 
+        
+
+        if (view_name === 'local-data') {
+
+            
+
+            const local_data_textarea = document.getElementById("local-data-textarea")
+
+            function adjust_text() {
+                local_data_textarea.style.height = 'auto'
+                local_data_textarea.style.height = local_data_textarea.scrollHeight + 'px';
+            }
+
+            local_data_textarea.addEventListener("input", function() {
+
+                adjust_text()
+            })
+
+
+
+           
+            local_data_textarea.textContent = `
+subscriptions:
+
+ksksksksak,
+sdsaasasasasass,
+asasdsd,
+dsdsdsd
+lslslslsls,
+ksksksksak,
+sdsaasasasasass,
+asasdsd,
+dsdsdsd
+lslslslsls,
+            
+hidden:
+
+ksksksksak,
+sdsaasasasasass,
+asasdsd,
+dsdsdsd
+lslslslsls,
+ksksksksak,
+sdsaasasasasass,
+asasdsd,
+dsdsdsd
+lslslslsls,`
+        
+      adjust_text()
+      }
+      
+        
     } catch (error) {
 
         console.error(error);

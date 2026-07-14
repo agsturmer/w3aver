@@ -1197,71 +1197,68 @@ h1 {
 .local-data {
 
     &__div {
+
         width: 100%;
-
-    }
-
-    &__div-top {
         
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin-bottom: 15px;
-        justify-content: space-between;
-        
-        
-        
-    }
+        background-color: #181820;
+        position: relative;
 
-    &__div-top div {
-
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        justify-content: center;
-        align-items: center;
     }
  
-    &__text-area {
+    &__textarea {
 
-        background-color: #181820;
         width: 100%;
-        resize: none;
-        border: 1px solid transparent;
-        border-radius: 5px;
-        min-height: 400px;
+        min-height: 400px; 
+        margin: 0;
+        box-sizing: border-box;
+        background-color: transparent;
         color: white;
-        padding: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        z-index: 40000000000;
-        z-index: 1;
-        position: relative;
+        resize: none;
         overflow-y: hidden;
+        outline: none;
+        width: 100%;
+        background-color: #181820;
+        border: 0px;
+        padding: 22px;
     }
 
-    &__tab {
-        width: 40px;
-        height: 40px;
-        background-color: rgb(45, 45, 78);
-        border-radius: 50px;
-        
-        
 
-    }
 
-    &__text-area:focus {
+    &__textarea:focus {
 
         outline: none;
     }
 
 
+    &__management {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__management-menu {
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+    }
+    &__management-menu button {
+        width: 80px;
+        height: 34px;
+        background-color: #24245f;
+        border: 0px solid black;
+        border-radius: 7px;
+        color: white;
+    }
+    &__management-menu > div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
 }
 
-
-
-#test-text {
-    font-size: 0.9rem;
-    color: #2f2f3c;
-}
